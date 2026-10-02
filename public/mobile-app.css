@@ -1,0 +1,392 @@
+﻿/* ========================================================================
+   DocFit — mobile app styles
+   Loaded after styles.css so these rules control phone layout.
+   ======================================================================== */
+
+@media (max-width: 600px) {
+  :root {
+    --mobile-bottom-nav: 76px;
+    --mobile-primary: #2563eb;
+    --mobile-dark: #0f172a;
+    --mobile-bg: #f8fafc;
+    --mobile-card: #ffffff;
+    --mobile-border: #e2e8f0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+    scroll-padding-bottom: 90px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    min-width: 320px;
+    padding-bottom: var(--mobile-bottom-nav);
+    background: var(--mobile-bg);
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .app-shell { display: block; min-height: 100vh; }
+
+  /* ---------- Top header ---------- */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    height: 62px;
+    margin: 0 -12px;
+    padding: 0 14px;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--mobile-border);
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    gap: 10px;
+  }
+
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--text);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  .mobile-brand .brand-mark-img { width: 30px; height: 30px; }
+
+  .topbar-search { display: none; }
+
+  .topbar-actions {
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .icon-ghost {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .user-chip {
+    padding: 3px;
+    border-radius: 50%;
+    background: var(--mobile-primary);
+    border: 0;
+  }
+
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    background: var(--mobile-primary);
+  }
+
+  .user-meta { display: none; }
+
+  /* ---------- Content ---------- */
+  .main-content {
+    width: 100%;
+    margin: 0;
+    padding: 0 12px 28px;
+  }
+
+  /* ---------- Welcome ---------- */
+  .welcome-section {
+    display: block;
+    padding: 24px 4px 18px;
+  }
+
+  .welcome-section h1 {
+    max-width: 330px;
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: -0.045em;
+  }
+
+  .welcome-text {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  /* ---------- Tool cards ---------- */
+  .tool-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .tool-card {
+    padding: 16px;
+    border-radius: 16px;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .tool-card:hover { transform: none; }
+
+  .tool-card-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .tool-card h3 { font-size: 15px; margin: 0; }
+  .tool-card p { font-size: 11px; margin: 3px 0 0; line-height: 1.4; }
+  .tool-card-cta { display: none; }
+
+  /* ---------- Dashboard row ---------- */
+  .dashboard-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .panel { padding: 16px; border-radius: 14px; }
+  .panel-header h2 { font-size: 14px; }
+
+  .stats-list { gap: 10px; }
+  .stats-list strong { font-size: 19px; }
+  .stats-list span:not(.stat-badge) { font-size: 10px; }
+  .stat-badge { width: 34px; height: 34px; font-size: 16px; }
+
+  .recent-files-list { gap: 8px; }
+  .recent-file { min-width: 165px; padding: 8px; }
+  .recent-file img { width: 38px; height: 38px; }
+  .recent-file strong { font-size: 10.5px; }
+  .recent-file span { font-size: 9.5px; }
+
+  .why-panel { padding: 18px; }
+  .why-list li { font-size: 12px; }
+  .why-cta { padding: 8px 14px; font-size: 11px; }
+
+  /* ---------- Tool sections ---------- */
+  .tool-section { margin-top: 26px; scroll-margin-top: 74px; }
+
+  .section-heading h2 { font-size: 20px; letter-spacing: -0.03em; }
+  .section-heading p:not(.section-kicker) { font-size: 12px; line-height: 1.5; }
+
+  .workspace-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .upload-column, .settings-column, .result-column { width: 100%; }
+
+  .upload-zone {
+    min-height: 180px;
+    padding: 20px 12px;
+    border-radius: 13px;
+  }
+
+  .upload-zone h3 { font-size: 14.5px; }
+  .upload-zone p { margin: 6px 0 12px; font-size: 11px; }
+  .upload-symbol { width: 42px; height: 42px; margin-bottom: 10px; border-radius: 12px; }
+
+  .outline-button { min-height: 42px; padding: 0 18px; font-size: 12px; }
+
+  .file-card { min-height: 60px; padding: 8px; border-radius: 12px; }
+  .file-thumbnail { width: 42px; height: 42px; }
+  .icon-button { width: 34px; height: 34px; font-size: 21px; }
+
+  .settings-header h3, .result-header h3 { font-size: 14.5px; }
+  .settings-header p, .result-header p { font-size: 10px; }
+  .settings-badge, .preview-status { font-size: 8px; }
+
+  .input-label { font-size: 10px; margin-bottom: 6px; }
+  .input-control, .color-control { height: 44px; font-size: 13px; border-radius: 10px; }
+
+  .field-grid, .range-grid { grid-template-columns: 1fr; gap: 11px; margin-top: 11px; }
+
+  .range-grid {
+    padding: 12px;
+    border: 1px solid var(--mobile-border);
+    border-radius: 12px;
+    background: #fafbff;
+  }
+
+  input[type="range"] { height: 26px; }
+
+  .action-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 9px;
+    margin-top: 15px;
+  }
+
+  .primary-button, .secondary-button, .download-button {
+    width: 100%;
+    min-height: 46px;
+    border-radius: 11px;
+    font-size: 13px;
+  }
+
+  .text-button {
+    min-height: 38px;
+    align-self: center;
+    font-size: 12px;
+  }
+
+  .result-preview {
+    min-height: 210px;
+    padding: 11px;
+    border-radius: 13px;
+  }
+
+  .result-preview img {
+    width: auto;
+    max-width: 100%;
+    max-height: 190px;
+  }
+
+  .result-meta {
+    min-height: 38px;
+    padding-top: 9px;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+  }
+
+  .info-panel { margin-top: 12px; padding: 11px; border-radius: 10px; }
+  .info-panel p { font-size: 10px; }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 36px;
+    padding-top: 20px;
+  }
+
+  .footer-logo { height: 30px; }
+  .footer-features { gap: 12px 18px; }
+  .footer-features li { font-size: 11px; }
+  .footer-tag { font-size: 17px; }
+
+  /* ---------- Bottom nav ---------- */
+  .sidebar {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 100;
+    width: 100%;
+    height: var(--mobile-bottom-nav);
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+    background: rgba(15, 23, 42, 0.98);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 0;
+    box-shadow: 0 -8px 25px rgba(15, 23, 42, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    display: block;
+  }
+
+  .sidebar .brand,
+  .sidebar .sidebar-footer,
+  .sidebar-nav-bottom { display: none; }
+
+  /* Show only first 4 nav items in bottom nav; hide the rest on mobile */
+  .sidebar-nav {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+  }
+
+  .sidebar-nav .nav-item {
+    min-width: 0;
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 5px 2px;
+    color: #94a3b8;
+    background: transparent;
+    border-radius: 12px;
+    font-size: 9px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: none;
+  }
+
+  .sidebar-nav .nav-item:nth-child(5),
+  .sidebar-nav .nav-item:nth-child(6) {
+    display: none; /* Hide History/My Files from bottom nav (use "More" later) */
+  }
+
+  .sidebar-nav .nav-item:hover,
+  .sidebar-nav .nav-item.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .sidebar-nav .nav-item.active {
+    box-shadow: inset 0 -2px 0 var(--mobile-primary);
+  }
+
+  .sidebar-nav .nav-icon {
+    width: auto;
+    height: 24px;
+    display: grid;
+    place-items: center;
+    font-size: 19px;
+    line-height: 1;
+  }
+
+  .sidebar-nav .nav-label {
+    display: block;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  /* ---------- Toast ---------- */
+  .toast {
+    right: 12px;
+    bottom: calc(var(--mobile-bottom-nav) + 12px);
+    left: 12px;
+    max-width: none;
+    padding: 13px 14px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  /* ---------- Coming soon modal ---------- */
+  .coming-soon-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .coming-soon-modal {
+    width: 100%;
+    padding: 24px 20px calc(24px + env(safe-area-inset-bottom));
+    border-radius: 22px 22px 0 0;
+    text-align: left;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-content { padding-right: 9px; padding-left: 9px; }
+  .welcome-section h1 { font-size: 25px; }
+  .workspace-card { padding: 10px; }
+  .sidebar-nav .nav-item { font-size: 8px; }
+  .sidebar-nav .nav-icon { font-size: 17px; }
+}

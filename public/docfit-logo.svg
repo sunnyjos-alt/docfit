@@ -1,0 +1,57 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" role="img" aria-label="DocFit — resize photos, images and signatures">
+  <defs>
+    <linearGradient id="dfGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0F3D5C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- === MARK === -->
+  <g transform="translate(16 22)">
+    <!-- Outer document frame -->
+    <rect x="0" y="0" width="76" height="76" rx="16"
+          fill="none" stroke="url(#dfGrad)" stroke-width="6"/>
+
+    <!-- Inner soft fill -->
+    <rect x="10" y="10" width="56" height="56" rx="10"
+          fill="url(#dfGrad)" opacity="0.08"/>
+
+    <!-- Resize corner brackets (top-left and bottom-right) -->
+    <path d="M4 18 V12 a8 8 0 0 1 8 -8 h6"
+          fill="none" stroke="url(#dfGrad)" stroke-width="6"
+          stroke-linecap="round"/>
+    <path d="M72 58 v6 a8 8 0 0 1 -8 8 h-6"
+          fill="none" stroke="url(#dfGrad)" stroke-width="6"
+          stroke-linecap="round"/>
+
+    <!-- Camera icon (top-left inside) -->
+    <rect x="18" y="26" width="26" height="20" rx="4" fill="url(#dfGrad)"/>
+    <rect x="26" y="23" width="10" height="5" rx="2" fill="url(#dfGrad)"/>
+    <circle cx="31" cy="36" r="6" fill="#FFFFFF"/>
+    <circle cx="31" cy="36" r="3" fill="url(#dfGrad)"/>
+    <circle cx="40" cy="30" r="1.4" fill="#FFFFFF"/>
+
+    <!-- Pen stroke (bottom-right inside) -->
+    <path d="M36 62 L58 40 L62 44 L40 66 Z" fill="url(#dfGrad)"/>
+    <path d="M36 62 L40 66 L34 68 Z" fill="#0F3D5C"/>
+
+    <!-- Diagonal resize arrow (the ⤢ cue) -->
+    <path d="M54 54 L70 70" stroke="url(#dfGrad)" stroke-width="5"
+          stroke-linecap="round"/>
+    <path d="M70 70 h-9 M70 70 v-9"
+          stroke="url(#dfGrad)" stroke-width="5"
+          stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- === WORDMARK === -->
+  <text x="120" y="76"
+        font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="52" font-weight="800" letter-spacing="-2"
+        fill="#0F172A">DocFit</text>
+
+  <!-- Tagline -->
+  <text x="122" y="98"
+        font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="13" font-weight="600" letter-spacing="0.5"
+        fill="#64748B">Resize photos, images &amp; signatures</text>
+</svg>

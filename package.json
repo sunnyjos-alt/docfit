@@ -1,0 +1,12 @@
+﻿{
+  "name": "prepready",
+  "version": "1.0.0",
+  "description": "Professional photo, signature, and image preparation tool for application submissions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

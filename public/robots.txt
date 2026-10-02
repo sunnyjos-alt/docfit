@@ -1,0 +1,18 @@
+﻿# DocFit — robots.txt
+# Tells search engines what to crawl.
+
+User-agent: *
+Allow: /
+
+# Explicitly allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://docfit.netlify.app/sitemap.xml
