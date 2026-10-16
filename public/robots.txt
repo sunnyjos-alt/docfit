@@ -15,4 +15,4 @@ User-agent: DuckDuckBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://docfit.netlify.app/sitemap.xml
+Sitemap: https://docfit.net/sitemap.xml
